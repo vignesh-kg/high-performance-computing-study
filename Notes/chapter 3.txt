@@ -1,0 +1,28 @@
+Q: What are some common steps involved in specifying a non-trivial parallel algorithm?
+	Specifying a non-trivial parallel algorithm may include:
+	• Identifying portions of work that can be performed concurrently.
+	• Mapping concurrent pieces of work onto multiple processors running in parallel.
+	• Distributing input, output, and intermediate data.
+	• Managing access to shared data.
+	• Synchronizing processors at various stages of execution.
+	
+Q: What are the two key steps in designing parallel algorithms?
+	• Dividing a computation into smaller computations 
+	• Assigning them to different processors for parallel execution.
+
+Q: What is decomposition?
+	Decomposition is the process of dividing a computation into smaller parts, some of which may potentially be executed in parallel.
+
+Q: What are tasks in parallel computing?
+	Tasks are programmer-defined units of computation into which the main computation is subdivided by decomposition. They are considered indivisible units of computation once defined and can vary in size.
+
+Q: Can tasks in a parallel computation be dependent on each other?
+	Yes, some tasks may use data produced by other tasks and thus may need to wait for those tasks to finish execution.
+
+Q: What is a task dependency graph?
+	A task dependency graph is an abstraction used to express dependencies among tasks and their relative order of execution.
+
+Q: What is the structure of a task dependency graph?
+	A task dependency graph is a directed acyclic graph (DAG) where:
+	• Nodes represent tasks.
+	• Directed edges indicate dependencies between tasks.
